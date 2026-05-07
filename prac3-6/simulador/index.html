@@ -1,0 +1,77 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador de Estructuras de Datos</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>Simulador Visual de Estructuras de Datos</h1>
+    <p>Pila, Cola y Lista Enlazada Simple</p>
+  </header>
+
+  <main class="container">
+
+    <!-- PILA -->
+    <section class="card">
+      <h2>Pila (Stack)</h2>
+
+      <div class="controls">
+        <input type="text" id="stackInput" placeholder="Valor"/>
+        <button onclick="pushStack()">Push</button>
+        <button class="danger" onclick="popStack()">Pop</button>
+      </div>
+
+      <div id="stackMessage" class="message"></div>
+
+      <div class="stack-wrapper">
+        <div class="top-label">TOPE</div>
+        <div id="stackContainer" class="stack"></div>
+      </div>
+    </section>
+
+    <!-- COLA -->
+    <section class="card">
+      <h2>Cola (Queue)</h2>
+
+      <div class="controls">
+        <input type="text" id="queueInput" placeholder="Valor"/>
+        <button onclick="enqueue()">Enqueue</button>
+        <button class="danger" onclick="dequeue()">Dequeue</button>
+      </div>
+
+      <div id="queueMessage" class="message"></div>
+
+      <div class="queue-labels">
+        <span>Frente</span>
+        <span>Final</span>
+      </div>
+
+      <div id="queueContainer" class="queue"></div>
+    </section>
+
+    <!-- LISTA -->
+    <section class="card">
+      <h2>Lista Enlazada Simple</h2>
+
+      <div class="controls">
+        <input type="text" id="listInput" placeholder="Valor"/>
+        <button onclick="insertStart()">Insertar Inicio</button>
+        <button onclick="insertEnd()">Insertar Final</button>
+        <button class="danger" onclick="removeStart()">Eliminar Inicial</button>
+      </div>
+
+      <div id="listMessage" class="message"></div>
+
+      <div id="linkedListContainer" class="linked-list"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
