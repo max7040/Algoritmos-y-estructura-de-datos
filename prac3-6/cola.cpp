@@ -1,18 +1,50 @@
 #include <iostream>
-#include <queue>
 using namespace std;
 
+class Cola {
+private:
+    int arr[100];
+    int frente;
+    int final;
+
+public:
+    Cola() {
+        frente = 0;
+        final = -1;
+    }
+
+    void enqueue(int x) {
+        final++;
+        arr[final] = x;
+    }
+
+    void dequeue() {
+        if (frente <= final) {
+            frente++;
+        }
+    }
+
+    void mostrar() {
+        for(int i = frente; i <= final; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
+};
+
 int main() {
-    queue<int> cola;
+    Cola cola;
 
-    cola.push(3);
-    cola.push(6);
-    cola.push(9);
-    cola.push(12);
+    cola.enqueue(5);
+    cola.enqueue(10);
+    cola.enqueue(15);
+    cola.enqueue(20);
+    cola.enqueue(25);
 
-    cola.pop();
+    cola.dequeue();
+    cola.dequeue();
 
-    cout << "Frente actual: " << cola.front() << endl;
+    cola.mostrar();
 
     return 0;
 }
