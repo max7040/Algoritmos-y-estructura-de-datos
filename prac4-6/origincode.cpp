@@ -1,7 +1,7 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
+#include <fstream>//lee y escribe archivos
+#include <sstream>//separa cadenas
+#include <string>//maneja cadenas de texto
 
 using namespace std;
 
@@ -17,12 +17,12 @@ public:
     Nodo(int _id, string _nombre, string _correo, string _carrera, int _anio)
         : id(_id),
           nombre(_nombre),
-          correo(_correo),
+          correo(_correo),  
           carrera(_carrera),
           anio(_anio),
           siguiente(nullptr),
           anterior(nullptr) {}
-};
+};// inicializa el nodo con los datos del estudiante y punteros a null
 
 // Clase ListaDoble
 class ListaDoble {
