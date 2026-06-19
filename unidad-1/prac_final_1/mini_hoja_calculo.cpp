@@ -1,11 +1,11 @@
 #include <iostream>
-#include <vector>
-#include <unordered_map>
-#include <stack>
-#include <queue>
-#include <iomanip>
-#include <string>
-#include <utility>
+#include <vector>//lista dinamica
+#include <unordered_map>//tabla hash para indice asociativo
+#include <stack>//pila para historial de cambios
+#include <queue>//cola para atencion de estudiantes
+#include <iomanip>//manipuladores de formato para salida tabular
+#include <string>//string para manejo de nombres
+#include <utility>//swap para ordenamiento eficiente
 
 using namespace std;
 
@@ -19,10 +19,10 @@ struct Estudiante {
 };
 
 // Estructuras de almacenamiento global
-vector<Estudiante> hoja;
-unordered_map<string, int> indiceHash;
-stack<vector<Estudiante>> historial;
-queue<string> colaAtencion;
+vector<Estudiante> hoja;//Vector para almacenar filas de la hoja de calculo
+unordered_map<string, int> indiceHash;//Mapa para indice asociativo (codigo -> posicion en hoja)
+stack<vector<Estudiante>> historial;//Pila para resguardo de estados previos
+queue<string> colaAtencion;//Cola para gestion de atencion en secretaria
 
 // Función en línea para cálculo aritmético eficiente
 inline float calcularPromedio(float n1, float n2, float n3) {
